@@ -1,5 +1,8 @@
 # This service enables resetting internal value of a controller with multiple degrees of freedom.
 
 string[] names
+float64[] positions
+float64[] velocities
+float64[] accelerations
 ---
 bool ok
