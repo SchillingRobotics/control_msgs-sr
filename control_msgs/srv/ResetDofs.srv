@@ -1,7 +1,7 @@
 # This service enables resetting internal value of a controller with multiple degrees of freedom.
 
 string[] names
-float64[] positions
+float64[] positions # if present, positions should match size of dof names and also size of velocities/accelerations
 float64[] velocities
 float64[] accelerations
 ---
