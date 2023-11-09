@@ -22,7 +22,6 @@ find_package(trajectory_msgs REQUIRED)
 set(msg_files
   msg/AdmittanceControllerState.msg
   msg/AdmittanceController2021State.msg
-  msg/DOFLimits.msg
   msg/CartesianTrajectoryGeneratorState.msg
   msg/DynamicJointState.msg
   msg/GripperCommand.msg
@@ -53,7 +52,6 @@ set(srv_files
   srv/QueryCalibrationState.srv
   srv/QueryTrajectoryState.srv
   srv/ResetDofs.srv
-  srv/SetDOFLimits.srv
 )
 
 if(BUILD_TESTING)
