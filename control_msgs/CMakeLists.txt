@@ -21,6 +21,7 @@ find_package(trajectory_msgs REQUIRED)
 
 set(msg_files
   msg/AdmittanceControllerState.msg
+  msg/CartesianTrajectoryGeneratorState.msg
   msg/DynamicJointState.msg
   msg/GripperCommand.msg
   msg/InterfaceValue.msg
@@ -50,6 +51,7 @@ set(action_files
 set(srv_files
   srv/QueryCalibrationState.srv
   srv/QueryTrajectoryState.srv
+  srv/ResetDofs.srv
 )
 
 rosidl_generate_interfaces(${PROJECT_NAME}
