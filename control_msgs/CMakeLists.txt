@@ -21,6 +21,7 @@ find_package(trajectory_msgs REQUIRED)
 
 set(msg_files
   msg/AdmittanceControllerState.msg
+  msg/CartesianTrajectoryGeneratorState.msg
   msg/DynamicJointState.msg
   msg/GripperCommand.msg
   msg/InterfaceValue.msg
@@ -39,6 +40,7 @@ set(msg_files
 )
 
 set(action_files
+  action/ParallelGripperCommand.action
   action/FollowJointTrajectory.action
   action/GripperCommand.action
   action/JointTrajectory.action
@@ -49,12 +51,8 @@ set(action_files
 set(srv_files
   srv/QueryCalibrationState.srv
   srv/QueryTrajectoryState.srv
+  srv/ResetDofs.srv
 )
-
-if(BUILD_TESTING)
-  find_package(ament_lint_auto REQUIRED)
-  ament_lint_auto_find_test_dependencies()
-endif()
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   ${action_files}
