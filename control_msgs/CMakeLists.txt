@@ -34,6 +34,8 @@ set(msg_files
   msg/MultiDOFCommand.msg
   msg/MultiDOFMultiTimeJointTrajectoryPoint.msg
   msg/MultiDOFStateStamped.msg
+  msg/MultiTimeJointTrajectory.msg
+  msg/MultiTimeJointTrajectoryPoint.msg
   msg/PidState.msg
   msg/SingleDOFState.msg
   msg/SingleDOFStateStamped.msg
