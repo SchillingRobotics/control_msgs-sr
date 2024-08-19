@@ -8,4 +8,4 @@ string[] joint_names
 
 # Array of trajectory points, which describe the positions, velocities,
 # accelerations and/or efforts of the joints at each time point.
-MultiTimeJointTrajectoryPoint[] points
+MultiTimeTrajectoryPoint[] points

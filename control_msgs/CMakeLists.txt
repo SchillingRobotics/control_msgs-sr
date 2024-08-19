@@ -32,10 +32,10 @@ set(msg_files
   msg/JointTrajectoryControllerState.msg
   msg/MecanumDriveControllerState.msg
   msg/MultiDOFCommand.msg
-  msg/MultiDOFMultiTimeJointTrajectoryPoint.msg
+  msg/MultiDOFMultiTimeTrajectoryPoint.msg
   msg/MultiDOFStateStamped.msg
-  msg/MultiTimeJointTrajectory.msg
-  msg/MultiTimeJointTrajectoryPoint.msg
+  msg/MultiTimeTrajectory.msg
+  msg/MultiTimeTrajectoryPoint.msg
   msg/PidState.msg
   msg/SingleDOFState.msg
   msg/SingleDOFStateStamped.msg
