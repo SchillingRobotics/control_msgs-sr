@@ -1,0 +1,1 @@
+control_msgs/AxisTrajectoryPoint[] axis_points

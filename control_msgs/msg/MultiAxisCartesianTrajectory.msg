@@ -7,4 +7,4 @@ std_msgs/Header header
 # the joint names array.
 
 string[] joint_names
-MultiDOFMultiTimeTrajectoryPoint[] points
+AxisCartesianTrajectory[] axis_cartesian_trajectories

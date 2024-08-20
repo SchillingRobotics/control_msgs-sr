@@ -21,6 +21,10 @@ find_package(trajectory_msgs REQUIRED)
 
 set(msg_files
   msg/AdmittanceControllerState.msg
+  msg/AxisCartesianTrajectory.msg
+  msg/AxisCartesianTrajectoryPoint.msg
+  msg/AxisTrajectory.msg
+  msg/AxisTrajectoryPoint.msg
   msg/CartesianTrajectoryGeneratorState.msg
   msg/DynamicJointState.msg
   msg/GripperCommand.msg
@@ -32,12 +36,10 @@ set(msg_files
   msg/JointTrajectoryControllerState.msg
   msg/MecanumDriveControllerState.msg
   msg/MultiDOFCommand.msg
-  msg/MultiDOFMultiTimeTrajectory.msg
-  msg/MultiDOFMultiTimeTrajectoryPoint.msg
   msg/MultiDOFStateStamped.msg
-  msg/MultiTimeTrajectory.msg
+  msg/MultiAxisTrajectory.msg
+  msg/MultiAxisCartesianTrajectory.msg
   msg/MultiTimeTrajectoryControllerState.msg
-  msg/MultiTimeTrajectoryPoint.msg
   msg/PidState.msg
   msg/SingleDOFState.msg
   msg/SingleDOFStateStamped.msg
@@ -45,12 +47,12 @@ set(msg_files
 )
 
 set(action_files
+  action/AxisTrajectory.action
   action/ParallelGripperCommand.action
   action/FollowJointTrajectory.action
-  action/FollowMultiTimeTrajectory.action
+  action/FollowAxisTrajectory.action
   action/GripperCommand.action
   action/JointTrajectory.action
-  action/MultiTimeTrajectory.action
   action/PointHead.action
   action/SingleJointPosition.action
 )

@@ -1,24 +1,24 @@
-# This message presents current controller state of JTC
+# This message presents current controller state of MTTC
 
 # Header timestamp should be update time of controller state
 std_msgs/Header header
 
-string[] joint_names
+string[] axis_names
 # The set point, that is, desired state.
-control_msgs/MultiTimeTrajectoryPoint reference
+AxisTrajectoryPoint[] references
 # Current value of the process (ie: latest sensor measurement on the controlled value).
-control_msgs/MultiTimeTrajectoryPoint feedback
+AxisTrajectoryPoint[] feedbacks
 # The error of the controlled value, essentially reference - feedback (for a regular PID implementation).
-control_msgs/MultiTimeTrajectoryPoint error
+AxisTrajectoryPoint[] errors
 # Current output of the controller.
-control_msgs/MultiTimeTrajectoryPoint output
+AxisTrajectoryPoint[] outputs
 
-string[] multi_dof_joint_names
-# The set point, that is, desired state.
-control_msgs/MultiDOFMultiTimeTrajectoryPoint multi_dof_reference
-# Current value of the process (ie: latest sensor measurement on the controlled value).
-control_msgs/MultiDOFMultiTimeTrajectoryPoint multi_dof_feedback
-# The error of the controlled value, essentially reference - feedback (for a regular PID implementation).
-control_msgs/MultiDOFMultiTimeTrajectoryPoint multi_dof_error
-# Current output of the controller.
-control_msgs/MultiDOFMultiTimeTrajectoryPoint multi_dof_output
+string[] cartesian_axis_names
+# The set point, that is, desired state, at each axis
+AxisCartesianTrajectoryPoint[] cartesian_references
+# Current value of the process (ie: latest sensor measurement on the controlled value) on each axis.
+AxisCartesianTrajectoryPoint[] cartesian_feedbacks
+# The error of the controlled value, essentially reference - feedback (for a regular PID implementation), per axis.
+AxisCartesianTrajectoryPoint[] cartesian_errors
+# Current output of the controller on each eaxis.
+AxisCartesianTrajectoryPoint[] cartesian_outputs

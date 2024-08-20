@@ -1,7 +1,7 @@
 # The trajectory for all revolute, continuous or prismatic joints
-control_msgs/MultiTimeTrajectory trajectory
+MultiAxisTrajectory trajectory
 # The trajectory for all planar or floating joints (i.e. individual joints with more than one DOF)
-control_msgs/MultiDOFMultiTimeTrajectory multi_dof_trajectory
+MultiAxisCartesianTrajectory cartesian_trajectory
 
 # Tolerances for the trajectory.  If the measured joint values fall
 # outside the tolerances the trajectory goal is aborted.  Any
@@ -27,7 +27,7 @@ JointComponentTolerance[] component_path_tolerance
 # GOAL_TOLERANCE_VIOLATED
 JointTolerance[] goal_tolerance
 JointComponentTolerance[] component_goal_tolerance
-builtin_interfaces/Duration goal_time_tolerance
+builtin_interfaces/Duration[] goal_time_tolerances
 
 ---
 int32 error_code
@@ -50,12 +50,12 @@ string error_string
 
 ---
 std_msgs/Header header
-string[] joint_names
-control_msgs/MultiTimeTrajectoryPoint desired
-control_msgs/MultiTimeTrajectoryPoint actual
-control_msgs/MultiTimeTrajectoryPoint error
+string[] axis_names
+AxisTrajectoryPoint[] desired_points
+AxisTrajectoryPoint[] actual_points
+AxisTrajectoryPoint[] errors
 
-string[] multi_dof_joint_names
-control_msgs/MultiDOFMultiTimeTrajectoryPoint multi_dof_desired
-control_msgs/MultiDOFMultiTimeTrajectoryPoint multi_dof_actual
-control_msgs/MultiDOFMultiTimeTrajectoryPoint multi_dof_error
+string[] cartesian_axis_names
+AxisCartesianTrajectoryPoint[] cartesian_desired_points
+AxisCartesianTrajectoryPoint[] cartesian_actual_points
+AxisCartesianTrajectoryPoint[] cartesian_errors
