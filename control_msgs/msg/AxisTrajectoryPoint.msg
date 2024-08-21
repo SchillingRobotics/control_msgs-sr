@@ -17,9 +17,7 @@ float64 velocity
 # prismatic joints.
 float64 acceleration
 
-# The torque or the force to be applied at each joint. For revolute/continuous
-# joints effort denotes a torque in newton-meters. For prismatic joints, effort
-# denotes a force in newtons.
+# TODO(henrygerardmoore): remove effort since JTC doesn't support it
 float64 effort
 
 # Desired time from the trajectory start for each joint to arrive at this trajectory point.
