@@ -1,24 +1,16 @@
-# Each trajectory point specifies either positions[, velocities[, accelerations]]
-# or positions[, effort] for the trajectory to be executed.
-# All specified values are in the same order as the joint names in JointTrajectory.msg.
+# Each trajectory point specifies positions[, velocities[, accelerations]]
 
-# Single DOF joint positions for each joint relative to their "0" position.
-# The units depend on the specific joint type: radians for revolute or
-# continuous joints, and meters for prismatic joints.
+# units are decided by the user (typically meters or radians)
 float64 position
 
-# The rate of change in position of each joint. Units are joint type dependent.
-# Radians/second for revolute or continuous joints, and meters/second for
-# prismatic joints.
+# units of position per second
 float64 velocity
 
-# Rate of change in velocity of each joint. Units are joint type dependent.
-# Radians/second^2 for revolute or continuous joints, and meters/second^2 for
-# prismatic joints.
+# units of velocity per second
 float64 acceleration
 
-# TODO(henrygerardmoore): remove effort since JTC doesn't support it
+# units are decided by the user (typically newtons for linear axes or N*m for revolute axes)
 float64 effort
 
-# Desired time from the trajectory start for each joint to arrive at this trajectory point.
+# Desired time from the trajectory start for this axis to arrive at this point.
 builtin_interfaces/Duration time_from_start
