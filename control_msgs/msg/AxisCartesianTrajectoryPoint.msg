@@ -1,4 +1,4 @@
-# Each multi-dof axis can specify a transform (up to 6 DOF).
+# Each axis can specify a transform (up to 6 DOF).
 geometry_msgs/Transform transform
 
 # There can be a velocity specified for the origin of the axis.
