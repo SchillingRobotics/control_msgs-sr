@@ -15,10 +15,13 @@ AxisTrajectoryPoint[] outputs
 
 string[] cartesian_axis_names
 # The set point, that is, desired state, at each axis
-AxisCartesianTrajectoryPoint[] cartesian_references
+AxisCartesianTrajectoryPoint cartesian_reference_world
+AxisCartesianTrajectoryPoint cartesian_reference_local
 # Current value of the process (ie: latest sensor measurement on the controlled value) on each axis.
-AxisCartesianTrajectoryPoint[] cartesian_feedbacks
+AxisCartesianTrajectoryPoint cartesian_feedback_world
+AxisCartesianTrajectoryPoint cartesian_feedback_local
 # The error of the controlled value, essentially reference - feedback (for a regular PID implementation), per axis.
-AxisCartesianTrajectoryPoint[] cartesian_errors
+AxisCartesianTrajectoryPoint cartesian_error
 # Current output of the controller on each eaxis.
-AxisCartesianTrajectoryPoint[] cartesian_outputs
+AxisCartesianTrajectoryPoint cartesian_output_world
+AxisCartesianTrajectoryPoint cartesian_output_local
