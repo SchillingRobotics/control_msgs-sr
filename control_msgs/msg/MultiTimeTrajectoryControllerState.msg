@@ -29,3 +29,5 @@ bool using_odometry_feedback
 
 # If used, the last odometry feedback
 nav_msgs/Odometry last_odom_feedback
+
+MultiAxisTrajectory last_reference
