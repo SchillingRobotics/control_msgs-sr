@@ -48,6 +48,16 @@ builtin_interfaces/Time trajectory_start_time
 builtin_interfaces/Time[] time_before_trajectory
 AxisTrajectoryPoint[] state_before_trajectory
 
+# time between start of interpolation and sample time
+float64[] interpoland_times
+
+# time between points used for interpolation
+float64[] interpoint_times
+
+# state at either end of interpolation
+AxisTrajectoryPoint[] interpolation_state_a
+AxisTrajectoryPoint[] interpolation_state_b
+
 # state after joint interpolation
 AxisTrajectoryPoint[] state_after_interpolation
 
