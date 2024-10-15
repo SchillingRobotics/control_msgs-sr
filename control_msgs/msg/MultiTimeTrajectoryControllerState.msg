@@ -45,7 +45,7 @@ float64[] reset_dofs_position
 builtin_interfaces/Time trajectory_start_time
 
 # state/time before trajectory started
-builtin_interfaces/Time time_before_trajectory
+builtin_interfaces/Time[] time_before_trajectory
 AxisTrajectoryPoint[] state_before_trajectory
 
 # state after joint interpolation
