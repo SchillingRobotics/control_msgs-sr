@@ -27,6 +27,8 @@ set(msg_files
   msg/AxisTrajectory.msg
   msg/AxisTrajectoryPoint.msg
   msg/CartesianTrajectoryGeneratorState.msg
+  msg/DynamicInterfaceGroupValues.msg
+  msg/DynamicInterfaceValues.msg
   msg/DynamicJointState.msg
   msg/GripperCommand.msg
   msg/InterfaceValue.msg
@@ -45,6 +47,7 @@ set(msg_files
   msg/SingleDOFState.msg
   msg/SingleDOFStateStamped.msg
   msg/SteeringControllerStatus.msg
+  msg/SpeedScalingFactor.msg
 )
 
 set(action_files

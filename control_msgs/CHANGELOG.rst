@@ -2,6 +2,18 @@
 Changelog for package control_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+5.3.0 (2024-11-18)
+------------------
+* Add Dynamic Interface Group Values message (`#155 <https://github.com/ros-controls/control_msgs/issues/155>`_)
+* Add speed_scaling_factor msg and field in JointTrajectoryControllerState (`#143 <https://github.com/ros-controls/control_msgs/issues/143>`_)
+* Contributors: Felix Exner (fexner), Wiktor Bajor
+
+5.2.0 (2024-06-10)
+------------------
+* Add message for publishing interface values with name and stamp (`#98 <https://github.com/ros-controls/control_msgs/issues/98>`_)
+* Add custom rosdoc2 config (`#132 <https://github.com/ros-controls/control_msgs/issues/132>`_)
+* Contributors: Christoph Fröhlich, Manuel Muth
+
 5.1.0 (2024-04-09)
 ------------------
 * Add ParallelGripperCommand (`#99 <https://github.com/ros-controls/control_msgs/issues/99>`_)
