@@ -14,6 +14,7 @@ find_package(action_msgs REQUIRED)
 find_package(ament_cmake REQUIRED)
 find_package(builtin_interfaces REQUIRED)
 find_package(geometry_msgs REQUIRED)
+find_package(nav_msgs REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(std_msgs REQUIRED)
@@ -21,7 +22,13 @@ find_package(trajectory_msgs REQUIRED)
 
 set(msg_files
   msg/AdmittanceControllerState.msg
+  msg/AxisCartesianTrajectory.msg
+  msg/AxisCartesianTrajectoryPoint.msg
+  msg/AxisTrajectory.msg
+  msg/AxisTrajectoryPoint.msg
   msg/CartesianTrajectoryGeneratorState.msg
+  msg/DynamicInterfaceGroupValues.msg
+  msg/DynamicInterfaceValues.msg
   msg/DynamicJointState.msg
   msg/GripperCommand.msg
   msg/InterfaceValue.msg
@@ -33,16 +40,22 @@ set(msg_files
   msg/MecanumDriveControllerState.msg
   msg/MultiDOFCommand.msg
   msg/MultiDOFStateStamped.msg
+  msg/MultiAxisTrajectory.msg
+  msg/MultiAxisCartesianTrajectory.msg
+  msg/MultiTimeTrajectoryControllerState.msg
   msg/PidState.msg
   msg/SingleDOFState.msg
   msg/SingleDOFStateStamped.msg
   msg/SteeringControllerStatus.msg
   msg/ControllerDebug.msg
+  msg/SpeedScalingFactor.msg
 )
 
 set(action_files
+  action/AxisTrajectory.action
   action/ParallelGripperCommand.action
   action/FollowJointTrajectory.action
+  action/FollowAxisTrajectory.action
   action/GripperCommand.action
   action/JointTrajectory.action
   action/PointHead.action
@@ -63,6 +76,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
     action_msgs
     builtin_interfaces
     geometry_msgs
+    nav_msgs
     sensor_msgs
     std_msgs
     trajectory_msgs
